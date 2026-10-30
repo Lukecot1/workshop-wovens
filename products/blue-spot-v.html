@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue spot V — Workshop Wovens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="logo">Workshop Wovens</a>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../shop.html">Shop</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="https://www.instagram.com/workshop_wovens/?r=nametag" target="_blank" rel="noopener">Instagram</a>
+      <a href="../cart.html" class="nav-cart">Cart (0)</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-page">
+
+      <div class="product-gallery">
+        <img class="main-img" id="main-img"
+             src="../images/products/blue-spot-v.jpg"
+             alt="Blue spot V">
+        <div class="thumb-strip">
+          <div class="thumb active" onclick="switchImg('../images/products/blue-spot-v.jpg', this)">
+            <img src="../images/products/blue-spot-v.jpg" alt="Blue spot V view 1">
+          </div>
+          <div class="thumb" onclick="switchImg('../images/products/blue-spot-v-hover.jpg', this)">
+            <img src="../images/products/blue-spot-v-hover.jpg" alt="Blue spot V view 2">
+          </div>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>Blue spot V</h1>
+        <p class="price">£155.00</p>
+        <p class="desc">One off hand woven wool cushion with duck feather filler.</p>
+        <p class="specs">Approximately 33 &times; 50cm &nbsp;&middot;&nbsp; One of a kind</p>
+        <button class="btn-add-cart"
+                data-id="blue-spot-v"
+                data-name="Blue spot V"
+                data-price="155"
+                data-img="../images/products/blue-spot-v.jpg">
+          Add to Cart
+        </button>
+        <a href="../shop.html" class="back-to-shop">&larr; Back to shop</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="../shop.html">Shop</a>
+    <a href="../about.html">About</a>
+  </footer>
+
+  <script src="../js/cart.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script>
+    function switchImg(src, el) {
+      document.getElementById('main-img').src = src;
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+    }
+  </script>
+</body>
+</html>
